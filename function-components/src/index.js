@@ -7,19 +7,39 @@ import RegisterUser from './register';
 
 //create a component 
 
+function getTime() {
+    return (new Date().toLocaleTimeString());
+}
+
+const divStyle = { right: '40px', top: '10px', float: 'right', marginRight: '20px', fontWeight: 'bold' }
+
+const Clock = () => {
+    return (
+        <div style={divStyle}>
+            Time is: {getTime()}
+        </div>
+    );
+}
+
 const App = () => {
     return (
         <div>
-            <div align="center">
+            <div align="left">
+                <Clock />
                 <h1>100DaysofCode</h1>
                 <h2>Welcome to the world of REACT!!!!</h2>
+
             </div>
             <div>
-                <RegisterUser/>
+                <RegisterUser />
             </div>
         </div>
     );
 }
 
 //show it to user
-ReactDOM.render(<App/>, document.querySelector("#root"));
+function tick(){
+    ReactDOM.render(<App />, document.querySelector("#root"));
+}
+
+setInterval(tick, 1000);
