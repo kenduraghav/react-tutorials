@@ -3,21 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CardDetail from './CardDetail';
 import ApprovalCard from './ApprovalCard';
-
-function getTime() {
-  return new Date().toLocaleTimeString();
-}
-
-//create a function component
-const Clock = () => {
-  return <div className='ui  right floated header'>Time is: {getTime()}</div>;
-};
+import Clock from './Clock';
 
 const App = () => {
   return (
     <div>
       <div className='ui container comments'>
-        <Clock />
         <h2 className='ui left floated header'>100DaysofCode</h2>
         <div className='ui clearing divider'></div>
         <h2 className='ui center aligned segment header'>
@@ -87,7 +78,6 @@ const App = () => {
             </form>
           </div>
         </ApprovalCard>
-
         <ApprovalCard>
           <Clock />
         </ApprovalCard>
@@ -95,10 +85,4 @@ const App = () => {
     </div>
   );
 };
-
-//show it to user
-function tick() {
-  ReactDOM.render(<App />, document.querySelector('#root'));
-}
-
-setInterval(tick, 1000);
+ReactDOM.render(<App />, document.querySelector('#root'));
