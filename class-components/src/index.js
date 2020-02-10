@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Clock from './Clock';
-import CueCard from './CueCard';
+// import CueCard from './CueCard';
+import SearchComponent from './SearchComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,9 +30,10 @@ class App extends React.Component {
             Welcome to the world of REACT!!!!
           </h2>
           <div className='ui clearing divider'></div>
-          <div className='ui cards'>
-            <CueCard />
+          <div className='ui right floated'>
+            <SearchComponent />
           </div>
+          <div className='ui clearing hidden divider'></div>
         </div>
       </div>
     );

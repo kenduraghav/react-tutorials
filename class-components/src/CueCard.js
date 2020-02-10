@@ -38,8 +38,9 @@ class CueCard extends React.Component {
   onClickFavorite = () => {
     this.setState({
       favorite: !this.state.favorite,
-      favoriteStyle:
-        this.state.favorite === true ? 'yellow star icon' : 'outline star icon'
+      favoriteStyle: this.state.favorite
+        ? 'yellow star icon'
+        : 'outline star icon'
     });
   };
 
