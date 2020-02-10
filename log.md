@@ -1,3 +1,3 @@
-#100DaysOfCode
+# 100DaysOfCode
 
-##Day1: Started to learn reactjs
+## Day1: Started to learn reactjs
