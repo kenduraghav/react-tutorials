@@ -26,7 +26,6 @@ class CueCard extends React.Component {
   }
 
   onClickLikeIcon = () => {
-    console.log('clicked >>>>' + this.state.liked);
     this.setState({
       liked: !this.state.liked,
       likeCount: this.state.liked ? 1 : 0,
@@ -37,7 +36,6 @@ class CueCard extends React.Component {
   };
 
   onClickFavorite = () => {
-    console.log('clicked >>>>' + this.state.favorite);
     this.setState({
       favorite: !this.state.favorite,
       favoriteStyle:
@@ -46,7 +44,6 @@ class CueCard extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div className='ui card'>
         <div className='content'>
