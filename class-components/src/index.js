@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Clock from './Clock';
 // import CueCard from './CueCard';
 import SearchComponent from './SearchComponent';
+import MarkdownCloneComponent from './MarkdownCloneComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,10 +31,11 @@ class App extends React.Component {
             Welcome to the world of REACT!!!!
           </h2>
           <div className='ui clearing divider'></div>
-          <div className='ui right floated'>
+          <div className='ui right floated' style={{ display: 'none' }}>
             <SearchComponent />
           </div>
           <div className='ui clearing hidden divider'></div>
+          <MarkdownCloneComponent />
         </div>
       </div>
     );
