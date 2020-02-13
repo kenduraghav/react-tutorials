@@ -21,3 +21,9 @@ Today is not productive. Just revisited basics learnt so far.
 Today I learned about DefaultProps and propTypes. Taken few #react challenges from #freeCodeCamp.
 
 **Thoughts** as the progress goes with challenge, felt little more productive, comparing yesterday.
+
+## Day 12:
+
+I was trying to clone MarkDown Syntax as today's experiment.
+
+**Thoughts** Re-inventing a wheel requires more knowledge about it.
