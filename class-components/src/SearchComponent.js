@@ -31,13 +31,6 @@ const FruitsContainer = props => {
 class SearchComponent extends React.Component {
   state = { searchTerm: '', fruits: FruitsConfig };
 
-  searchRecords = ev => {
-    var value = ev.target.value;
-    this.setState({
-      searchTerm: value
-    });
-  };
-
   onSubmitForm = event => {
     event.preventDefault();
     let value = this.state.searchTerm;
@@ -69,8 +62,8 @@ class SearchComponent extends React.Component {
               <input
                 type='text'
                 placeholder='Search'
-                value={this.state.searchTerm || ''}
-                onChange={this.searchRecords}
+                value={this.state.searchTerm}
+                onChange={e => this.setState({ searchTerm: e.target.value })}
               />
             </div>
             <button type='reset' className='ui button' onClick={this.showAll}>
