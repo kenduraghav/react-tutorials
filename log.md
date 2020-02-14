@@ -27,3 +27,9 @@ Today I learned about DefaultProps and propTypes. Taken few #react challenges fr
 I was trying to clone MarkDown Syntax as today's experiment.
 
 **Thoughts** Re-inventing a wheel requires more knowledge about it.
+
+## Day 13:
+
+Again I have worked on Markdown / Asciidoc preview component. Invoking REST Api using SparkJava and returns asciidoctor output and rendered using React.
+
+**Thoughts** Feeling good and at same time sleepy. More way to go.
