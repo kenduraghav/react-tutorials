@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Clock from './Clock';
 // import CueCard from './CueCard';
 import SearchComponent from './SearchComponent';
-import MarkdownCloneComponent from './MarkdownCloneComponent';
+import AsciiDocPreviewComponent from './AsciiDocPreviewComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class App extends React.Component {
             <SearchComponent />
           </div>
           <div className='ui clearing hidden divider'></div>
-          <MarkdownCloneComponent />
+          <AsciiDocPreviewComponent />
         </div>
       </div>
     );
