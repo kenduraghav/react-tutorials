@@ -33,3 +33,13 @@ I was trying to clone MarkDown Syntax as today's experiment.
 Again I have worked on Markdown / Asciidoc preview component. Invoking REST Api using SparkJava and returns asciidoctor output and rendered using React.
 
 **Thoughts** Feeling good and at same time sleepy. More way to go.
+
+## Day 14:
+
+Skipped due to restless night on previous day. Took a break.
+
+## Day 15:
+
+Took React challenges on freeCodeCamp and completed the basics of ReactJS. Learned about callbacks
+
+**Thoughts** Learned about different aspects and key concepts of React. React challenges is the easier way to learn the concepts.
