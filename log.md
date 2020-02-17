@@ -43,3 +43,9 @@ Skipped due to restless night on previous day. Took a break.
 Took React challenges on freeCodeCamp and completed the basics of ReactJS. Learned about callbacks
 
 **Thoughts** Learned about different aspects and key concepts of React. React challenges is the easier way to learn the concepts.
+
+## Day 16:
+
+Today I am working in creating react app that based on Udemy course for searching videos from Youtube's public api.
+
+**Thoughts** Good motivation. But need to sleep as its going to be late night.
