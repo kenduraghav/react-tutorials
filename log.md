@@ -49,3 +49,9 @@ Took React challenges on freeCodeCamp and completed the basics of ReactJS. Learn
 Today I am working in creating react app that based on Udemy course for searching videos from Youtube's public api.
 
 **Thoughts** Good motivation. But need to sleep as its going to be late night.
+
+## Day 17:
+
+Worked on creating video search app based on Udemy course.
+
+**Thoughts**: Today bit frustrated due to some unforeseen problems. Its okay after some learning.
