@@ -55,3 +55,9 @@ Today I am working in creating react app that based on Udemy course for searchin
 Worked on creating video search app based on Udemy course.
 
 **Thoughts**: Today bit frustrated due to some unforeseen problems. Its okay after some learning.
+
+## Day 18:
+
+Completed video search app based on Udemy course. Learnt about so many useful concepts and revisiting the basics.
+
+**Thoughts** Feeling motivated and good. Planning to create an own app based on the above learnt concepts.
