@@ -61,3 +61,13 @@ Worked on creating video search app based on Udemy course.
 Completed video search app based on Udemy course. Learnt about so many useful concepts and revisiting the basics.
 
 **Thoughts** Feeling motivated and good. Planning to create an own app based on the above learnt concepts.
+
+## Day 19:
+
+Watched some youtube videos on reactjs. Not much progress today.
+
+## Day 20:
+
+Created a calculator application using reactjs based on the concepts learned so far.
+
+**Thoughts** Simple things are tough to handle.
