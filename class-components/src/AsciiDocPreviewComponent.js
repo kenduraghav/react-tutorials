@@ -27,11 +27,17 @@ class AsciiDocPreviewComponent extends React.Component {
 
   onClickSubmitButton = async e => {
     e.preventDefault();
-    const response = await RestClient.get('/asciidoc', {
-      params: { input: `${this.state.input}` }
+    const response = await RestClient.post('/asciidoc', {
+      data: `${this.state.input}`
     });
+    let output = '';
+    if (response !== 'undefined' && response.data) {
+      output = response.data;
+    } else {
+      output = 'OOps try again later';
+    }
     this.setState({
-      output: response.data
+      output: output
     });
   };
 
