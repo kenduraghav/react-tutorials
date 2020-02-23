@@ -20,12 +20,12 @@ export const caloptions = {
     isSelected: false
   },
   divide: {
-    label: '÷',
+    label: '/',
     operation: 'divide',
     isSelected: false
   },
   multiply: {
-    label: '×',
+    label: '*',
     operation: 'multiply',
     isSelected: false
   },

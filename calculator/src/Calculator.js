@@ -1,66 +1,64 @@
 import React from 'react';
 import PadButton from './Padbutton';
-
 import ResultView from './ResultView';
 
 class Calculator extends React.Component {
   state = {
-    selFirstNum: 0,
-    selSecondNum: 0,
-    selOperation: '',
-    input: '',
-    output: 'Calculator output'
+    displayText: '0',
+    output: '0',
+    op: ''
   };
 
-  handlePadInput = selNum => {
+  handlePadInput = (e, selNum) => {
+    e.preventDefault();
     this.setState({
       input: selNum
     });
   };
 
-  handleNumSelect = numvalue => {
-    let input = this.state.input + numvalue;
+  handleNumSelect = (e, numvalue) => {
+    e.preventDefault();
+    let displayText =
+      this.state.displayText === '0'
+        ? this.state.displayText.replace('0', '') + numvalue
+        : this.state.displayText + numvalue;
     this.setState({
-      input: input
-    });
-    let selOperation = this.state.selOperation;
-    if (selOperation === '') {
-      this.setState({
-        selFirstNum: numvalue
-      });
-    } else {
-      this.setState({
-        selSecondNum: numvalue
-      });
-    }
-  };
-
-  handleOpSelect = op => {
-    let input = this.state.input + op.label;
-    this.setState({
-      input: input,
-      selOperation: op.operation
+      displayText: displayText
     });
   };
 
-  handleEquals = () => {
-    let op1 = this.state.selFirstNum;
-    let op2 = this.state.selSecondNum;
-    let operator = this.state.selOperation;
+  handleOpSelect = (e, op) => {
+    e.preventDefault();
+    let displayText = this.state.displayText + op.label;
+    this.setState({
+      displayText: displayText,
+      op: op
+    });
+  };
 
+  handleEquals = e => {
+    e.preventDefault();
+    let op = this.state.op;
+    let operands = this.state.displayText.split(op.label);
+    let num1 = parseFloat(operands[0]);
+    let num2 = parseFloat(operands[1]);
     let result = 0;
-    switch (operator) {
-      case 'add':
-        result = op1 + op2;
+    switch (op.label) {
+      case '+':
+        result =
+          this.state.output === '0' ? num1 + num2 : this.state.output + num2;
         break;
-      case 'subtract':
-        result = op1 - op2;
+      case '-':
+        result =
+          this.state.output === '0' ? num1 - num2 : this.state.output - num2;
         break;
-      case 'multiply':
-        result = op1 * op2;
+      case '*':
+        result =
+          this.state.output === '0' ? num1 * num2 : this.state.output * num2;
         break;
-      case 'divide':
-        result = op1 / op2;
+      case '/':
+        result =
+          this.state.output === '0' ? num1 / num2 : this.state.output / num2;
         break;
       default:
         result = 0;
@@ -71,15 +69,49 @@ class Calculator extends React.Component {
     });
   };
 
+  handleClearEntry = e => {
+    //TODO: handle clearing last entry;
+    e.preventDefault();
+    this.setState({
+      displayText: '',
+      output: '0',
+      op: ''
+    });
+  };
+
+  handleCancelOperation = e => {
+    //TODO:  handle clearing all inputs;
+    e.preventDefault();
+    this.setState({
+      displayText: '',
+      output: '0',
+      op: ''
+    });
+  };
+
+  calculatePercentage = e => {
+    e.preventDefault();
+    let input = this.state.displayText;
+    let op = this.state.op.label;
+    let value = input.split(op);
+    let result = parseFloat(value) / 100;
+    this.setState({
+      output: result
+    });
+  };
+
   render() {
     return (
       <div className='ui cards'>
         <div className='ui card'>
           <PadButton
-            input={this.state.input}
+            displayText={this.state.displayText}
             onNumSelect={this.handleNumSelect}
             onOpSelect={this.handleOpSelect}
             onEquals={this.handleEquals}
+            onPercentClick={this.calculatePercentage}
+            onCancelClick={this.handleCancelOperation}
+            onClearEntry={this.handleClearEntry}
           />
         </div>
         <div className='ui card'>

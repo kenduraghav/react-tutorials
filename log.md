@@ -71,3 +71,16 @@ Watched some youtube videos on reactjs. Not much progress today.
 Created a calculator application using reactjs based on the concepts learned so far.
 
 **Thoughts** Simple things are tough to handle.
+
+## Day 21:
+
+Didn't code today. Spent time with my family.
+
+**Thoughts** Need to balance the time between family and code practice.
+
+## Day 22:
+
+Worked on calculator application. Added few more operations using _reactjs_ concepts learned.
+
+**Thoughts**  
+Need to work on more functionalities.
