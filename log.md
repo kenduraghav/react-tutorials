@@ -84,3 +84,14 @@ Worked on calculator application. Added few more operations using _reactjs_ conc
 
 **Thoughts**  
 Need to work on more functionalities.
+
+## Day 23:
+
+Gone through Redux tutorials on Udemy course.
+
+## Day 24:
+
+Watched few more tutorials on Redux in Udemy course. Created a basic _react_ and _redux_ application.
+
+**Thoughts**
+A bit vague concept to learn at the initial time.
