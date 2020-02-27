@@ -102,3 +102,9 @@ Watched videos on _react_ _redux_ concepts in Udemy. Worked on Sample applicatio
 
 **Thoughts**
 Again little bit confusion with the terms and concepts, especially when combining with _ReactJS_. will continue tomorrow.
+
+## Day 26
+
+Continued to work the Book Selection app using _react_ and _redux_. Learned about mapToStateProps, connect and how it updates the state.
+
+**Thoughts** Need to revisit the concepts in redux again to get know it good.
