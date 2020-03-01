@@ -108,3 +108,15 @@ Again little bit confusion with the terms and concepts, especially when combinin
 Continued to work the Book Selection app using _react_ and _redux_. Learned about mapToStateProps, connect and how it updates the state.
 
 **Thoughts** Need to revisit the concepts in redux again to get know it good.
+
+## Day 27:
+
+Revisited concepts about _Redux_ and worked on few _freecodecamp_ challenges with Redux.
+
+## Day 28:
+
+Asusual Skipped, every saturday skipped, except the first saturday in this coding journey.
+
+## Day 29:
+
+Gone through udemy #react course tutorials on what Redux-thunk. To get hands on, now working on a sample redux-thunk application.
