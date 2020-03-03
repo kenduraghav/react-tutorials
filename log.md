@@ -120,3 +120,11 @@ Asusual Skipped, every saturday skipped, except the first saturday in this codin
 ## Day 29:
 
 Gone through udemy #react course tutorials on what Redux-thunk. To get hands on, now working on a sample redux-thunk application.
+
+## Day 30:
+
+Yesterday was working on a Java problem.
+
+## Day 31:
+
+Today continued to learn Redux thunk. Watched videos on Udemy about Redux thunk. Rules of Action creators, Rules of reducers.
