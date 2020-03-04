@@ -128,3 +128,7 @@ Yesterday was working on a Java problem.
 ## Day 31:
 
 Today continued to learn Redux thunk. Watched videos on Udemy about Redux thunk. Rules of Action creators, Rules of reducers.
+
+## Day 32: 
+
+Completed the Redux challenges in freeCodeCamp tutorials. Need to practice on React and Redux concepts.
