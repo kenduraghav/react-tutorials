@@ -1,8 +1,24 @@
 import React from 'react';
 import PadButton from './Padbutton';
 import ResultView from './ResultView';
+import { connect } from 'react-redux';
 
 class Calculator extends React.Component {
+  render() {
+    return (
+      <div className='ui cards'>
+        <div className='ui card'>
+          <PadButton />
+        </div>
+        <div className='ui card'>
+          <ResultView />
+        </div>
+      </div>
+    );
+  }
+}
+
+/* class Calculator extends React.Component {
   state = {
     displayText: '0',
     output: '0',
@@ -120,6 +136,12 @@ class Calculator extends React.Component {
       </div>
     );
   }
-}
-
-export default Calculator;
+} */
+const mapStateToProps = state => {
+  return {
+    displayText: state.displayText,
+    output: state.output,
+    op: state.op
+  };
+};
+export default connect(mapStateToProps)(Calculator);
