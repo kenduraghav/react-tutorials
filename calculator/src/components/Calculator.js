@@ -2,6 +2,7 @@ import React from 'react';
 import PadButton from './Padbutton';
 import ResultView from './ResultView';
 import { connect } from 'react-redux';
+import './calculator.css';
 
 class Calculator extends React.Component {
   render() {

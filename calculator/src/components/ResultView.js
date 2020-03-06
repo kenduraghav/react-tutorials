@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './calculator.css';
 
 const ResultView = ({ output }) => {
   return (
-    <div className='ui relaxed grid'>
+    <div className='ui relaxed grid '>
       <div className='row'>
         <div className='column'>Output:</div>
       </div>
@@ -14,6 +15,6 @@ const ResultView = ({ output }) => {
   );
 };
 const mapStateToProps = state => {
-  return { output: state.output };
+  return { output: state.calcReducers.outputText };
 };
 export default connect(mapStateToProps)(ResultView);

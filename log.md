@@ -136,3 +136,7 @@ Completed the Redux challenges in freeCodeCamp tutorials. Need to practice on Re
 ## Day 33:
 
 Today worked on Redux concepts learned so far. Revamping the calculator app using React and Redux.
+
+## Day 34:
+
+Continued to work on calculator app using _React_ and _Redux_.

@@ -1,13 +1,20 @@
 //Action creator
-
-export const addFunc = () => {
-  type: 'ADD';
+export const numSelect = numvalue => {
+  return { type: 'NUM_SELECT', payload: { numval: numvalue } };
 };
 
-export const subtract = () => {
-  type: 'SUBTRACT';
+export const opSelect = operation => {
+  return { type: 'OP_SELECT', payload: operation };
 };
 
-export const multiply = () => {
-  type: 'MULTIPLY';
+export const evaluateExpression = () => {
+  return { type: 'EVAL_EXPR' };
+};
+
+export const clearExpression = () => {
+  return { type: 'CLEAR_ALL' };
+};
+
+export const calcPercentage = () => {
+  return { type: 'PERCENTAGE' };
 };
