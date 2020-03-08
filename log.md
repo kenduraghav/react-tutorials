@@ -140,3 +140,11 @@ Today worked on Redux concepts learned so far. Revamping the calculator app usin
 ## Day 34:
 
 Continued to work on calculator app using _React_ and _Redux_.
+
+## Day 35:
+
+Attempted to work on FreeCodeCamp React and Redux challenges. fall asleep while doing so.
+
+## Day 36:
+
+Completed the React and Redux challenges on freeCodeCamp.
