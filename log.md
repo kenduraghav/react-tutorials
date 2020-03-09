@@ -148,3 +148,7 @@ Attempted to work on FreeCodeCamp React and Redux challenges. fall asleep while 
 ## Day 36:
 
 Completed the React and Redux challenges on freeCodeCamp. Lot more way to go
+
+## Day 37:
+
+Worked on Redux and thunk application based on udemy video tutorial. Yet to finish on the sample app using React, Redux and thunk.
