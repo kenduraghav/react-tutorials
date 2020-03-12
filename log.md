@@ -160,3 +160,7 @@ Skipped actually due to some unavoidable reasons.
 ## Day 39:
 
 Continued to work on Redux and thunk application based on udemy video tutorial.
+
+## Day 40:
+
+worked on fetching blog posts and its users example using React and Redux-Thunk app based on udemy video tutorial.
