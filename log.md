@@ -164,3 +164,7 @@ Continued to work on Redux and thunk application based on udemy video tutorial.
 ## Day 40:
 
 worked on fetching blog posts and its users example using React and Redux-Thunk app based on udemy video tutorial.
+
+## Day 41:
+
+Working on CRUD app using _ReactJS_ as Front End and _Java_ as backend
