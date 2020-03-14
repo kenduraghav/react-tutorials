@@ -168,3 +168,7 @@ worked on fetching blog posts and its users example using React and Redux-Thunk 
 ## Day 41:
 
 Working on CRUD app using _ReactJS_ as Front End and _Java_ as backend
+
+## Day 42:
+
+Working on CRUD app using _ReactJS_ . Today learned about React router and created a sample app using React router.
