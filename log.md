@@ -172,3 +172,6 @@ Working on CRUD app using _ReactJS_ as Front End and _Java_ as backend
 ## Day 42:
 
 Working on CRUD app using _ReactJS_ . Today learned about React router and created a sample app using React router.
+
+## Day 43: 
+Continued to work on the CRUD App using _Reactjs_. Implementing a video Streaming Application using React, Redux and React-Router. 
