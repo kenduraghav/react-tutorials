@@ -180,3 +180,11 @@ Continued to work on the CRUD App using _Reactjs_. Implementing a video Streamin
 ## Day 44:
 
 Gone thru ReactJS videos on Udemy. Got introduced to Redux form and Redux dev tools and debugging. Need to revisit all basics.
+
+## Day 45:
+
+Worked on Redux forms based on Udemy course. Created few input fields and form submit event handled.
+
+## Day 46:
+
+Continued to work on Redux forms with validating form fieds.
