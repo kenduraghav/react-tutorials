@@ -188,3 +188,19 @@ Worked on Redux forms based on Udemy course. Created few input fields and form s
 ## Day 46:
 
 Continued to work on Redux forms with validating form fieds.
+
+## Day 47:
+
+just revised the previous concepts learned so far. Not much productive.
+
+## Day 48:
+
+Gone through some blog posts on Redux tutorial.
+
+## Day 49:
+
+Skipped.
+
+## Day 50:
+
+Worked on a basic redux-thunk app.
