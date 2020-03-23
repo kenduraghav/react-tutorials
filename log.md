@@ -204,3 +204,7 @@ Skipped.
 ## Day 50:
 
 Worked on a basic redux-thunk app.
+
+## Day 51:
+
+Resume the work on the CRUD App as mentioned in _Day 41_ with ReactJS and Java.

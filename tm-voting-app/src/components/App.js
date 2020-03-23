@@ -1,16 +1,18 @@
 import React from 'react';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route } from 'react-router-dom';
 import UserForm from './UserForm';
+import { Login } from './Login';
+import { Header } from './Header';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div className='container'>
-        <h2>TM Voting App</h2>
-        <div className='row'>
-          <UserForm />
-        </div>
+      <div className='ui container'>
+        <BrowserRouter>
+          <Header />
+          <Route path='/' exact component={Login} />
+          <Route path='/register' exact component={UserForm} />
+        </BrowserRouter>
       </div>
     );
   }
