@@ -208,3 +208,9 @@ Worked on a basic redux-thunk app.
 ## Day 51:
 
 Resume the work on the CRUD App as mentioned in _Day 41_ with ReactJS and Java.
+
+
+## Day 52:
+
+I have signed off from #100DaysOfCode,since i was failed to manage my emotions amid of Covid-19 situation. 
+Though today_(28-03-2020)_, I worked on creating streams app using React and Redux forms. I will continue learning in my own pace. 
