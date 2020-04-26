@@ -13,15 +13,22 @@ class StreamList extends React.Component {
     if (stream.userId === this.props.userId) {
       return (
         <div className='right floated content'>
-          <button className='ui button primary'>Edit</button>
-          <button className='ui button negative'>Delete</button>
+          <Link to={`/streams/edit/${stream.id}`} className='ui button primary'>
+            Edit
+          </Link>
+          <Link
+            to={`/streams/delete/${stream.id}`}
+            className='ui button negative'
+          >
+            Delete
+          </Link>
         </div>
       );
     }
   }
 
   renderList() {
-    return this.props.streams.map(stream => {
+    return this.props.streams.map((stream) => {
       return (
         <div key={stream.id} className='item'>
           {this.renderAdmin(stream)}
@@ -58,11 +65,11 @@ class StreamList extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     streams: Object.values(state.streams),
     userId: state.auth.userId,
-    isSignedIn: state.auth.isSignedIn
+    isSignedIn: state.auth.isSignedIn,
   };
 };
 
