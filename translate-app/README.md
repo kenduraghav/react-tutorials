@@ -1,6 +1,6 @@
 ### Using React Context System
 
-This is simple examples uses React context system.  
+This is a simple example that uses React context system.  
 
 The React Context systems, helps to share the data between nested components. Unlike props, which is passed to the direct child components.
 
