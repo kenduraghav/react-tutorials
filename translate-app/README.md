@@ -1,12 +1,12 @@
 ### Using React Context System
 
-This is a simple example that uses React context system.  
+This is a simple example that uses React context system.
 
-The React Context systems, helps to share the data between nested components. Unlike props, which is passed to the direct child components.
+The React Context system, helps to share the data between nested components. Unlike props, which is passed to the direct child components.
 
-From Top to bottom, the context feature, can be used to pass the data to its nested componets. 
+From Top to bottom, the context system, can be used to pass the data to its nested componets.
 
-However, there is a drawback in this feature, comparing _Redux_ lib. Passing data between different store components will be hard when using React context System. 
+However, there is a drawback in this feature, comparing _Redux_ lib. Passing data between different store components will be hard when using React context System.
 
 Unlike in Redux, we have a centralized a store and actions from different components can make change of the store data.
 
