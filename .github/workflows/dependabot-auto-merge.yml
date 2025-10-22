@@ -1,15 +1,11 @@
-name: Auto-merge Dependabot updates
+name: Auto-approve and merge Dependabot updates
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
-      - labeled
+    types: [opened, synchronize, reopened, ready_for_review, labeled]
   pull_request_review:
     types: [submitted]
+  workflow_dispatch:  # 👈 allows manual trigger from the Actions tab
 
 permissions:
   contents: write
@@ -18,24 +14,25 @@ permissions:
   statuses: read
 
 jobs:
-  dependabot:
+  auto-merge:
+    # Run only for Dependabot PRs
     if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Dependabot metadata
+      - name: 🧩 Fetch Dependabot metadata
         id: metadata
         uses: dependabot/fetch-metadata@v2
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Auto approve Dependabot PRs
+      - name: ✅ Auto-approve Dependabot PR
         if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
         uses: hmarr/auto-approve-action@v4
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Auto merge Dependabot PRs
+      - name: 🔄 Auto-merge Dependabot PR
         if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
         uses: pascalgn/automerge-action@v0.15.6
         env:
@@ -43,3 +40,10 @@ jobs:
           MERGE_METHOD: squash
           MERGE_COMMIT_MESSAGE: "dependabot"
           MERGE_DELETE_BRANCH: "true"
+
+      - name: 💬 Add confirmation comment
+        if: ${{ success() }}
+        run: |
+          gh pr comment "$GITHUB_REF_NAME" --body "✅ This Dependabot PR was automatically approved and merged."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
