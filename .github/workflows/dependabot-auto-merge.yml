@@ -1,9 +1,8 @@
 name: Auto-approve and merge Dependabot PRs
 
-# Trigger on PR events or manual run
 on:
   pull_request:
-    types: [opened, reopened, synchronize, ready_for_review, labeled]
+    types: [opened, reopened, synchronize, ready_for_review]
   workflow_dispatch:
 
 permissions:
@@ -15,18 +14,22 @@ permissions:
 jobs:
   dependabot-auto-merge:
     runs-on: ubuntu-latest
-
+    # Only run for Dependabot PRs
+    if: github.actor == 'dependabot[bot]'
+    
     steps:
-      # Debug info to confirm workflow triggers
+      # Debug info
       - name: 🧩 Debug event
         run: |
-          echo "Actor: $GITHUB_ACTOR"
-          echo "Event name: $GITHUB_EVENT_NAME"
-          echo "PR head ref: $GITHUB_REF_NAME"
-          echo "PR URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/pull/$GITHUB_REF_NAME"
+          echo "Actor: ${{ github.actor }}"
+          echo "Event name: ${{ github.event_name }}"
+          echo "PR number: ${{ github.event.pull_request.number }}"
+          echo "PR URL: ${{ github.event.pull_request.html_url }}"
+          echo "PR base: ${{ github.event.pull_request.base.ref }}"
+          echo "PR head: ${{ github.event.pull_request.head.ref }}"
 
       # Fetch Dependabot metadata
-      - name: Fetch Dependabot metadata
+      - name: 📦 Fetch Dependabot metadata
         id: metadata
         uses: dependabot/fetch-metadata@v2
         with:
@@ -34,25 +37,23 @@ jobs:
 
       # Auto-approve if not a major update
       - name: ✅ Auto-approve Dependabot PRs
-        if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
-        uses: hmarr/auto-approve-action@v4
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
-      # Auto-merge if not a major update
-      - name: 🔄 Auto-merge Dependabot PRs
-        if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
-        uses: pascalgn/automerge-action@v0.15.6
+        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
+        run: gh pr review --approve "${{ github.event.pull_request.number }}"
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_METHOD: squash
-          MERGE_COMMIT_MESSAGE: "dependabot"
-          MERGE_DELETE_BRANCH: "true"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Comment on PR for visibility
+      # Enable auto-merge (GitHub native)
+      - name: 🔄 Enable auto-merge
+        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
+        run: gh pr merge --auto --squash "${{ github.event.pull_request.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Comment on PR
       - name: 💬 Post confirmation comment
-        if: ${{ success() }}
+        if: success()
         run: |
-          gh pr comment "$GITHUB_REF_NAME" --body "✅ This Dependabot PR has been automatically approved and merged."
+          gh pr comment "${{ github.event.pull_request.number }}" \
+            --body "✅ Auto-approved. Will merge automatically once checks pass."
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
